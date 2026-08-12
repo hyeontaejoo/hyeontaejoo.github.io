@@ -1,2 +1,2 @@
-# HyeonTaeJoo.github.io
+# hyeontaejoo.github.io
 Robotics
