@@ -42,6 +42,10 @@
 
 
 
+/* =========================================================
+   DARK MODE
+========================================================= */
+
 [data-theme="dark"] {
 
   --bg: #0d1117;
@@ -147,7 +151,7 @@ img {
 
   display: block;
 
-  width: 100%;
+  max-width: 100%;
 
 }
 
@@ -772,40 +776,58 @@ img {
 }
 
 
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
 .avatar {
 
-  width: 105px;
+  position: relative;
 
-  height: 105px;
+  width: 125px;
+
+  height: 125px;
 
   margin-bottom: 36px;
 
-  display: grid;
-
-  place-items: center;
+  overflow: hidden;
 
   border-radius: 28px;
 
-  background:
-    linear-gradient(
-      135deg,
-      var(--primary),
-      var(--purple)
-    );
+  border: 3px solid
+    color-mix(in srgb, var(--primary) 28%, transparent);
 
-  color: #ffffff;
-
-  font-size: 2rem;
-
-  font-weight: 800;
-
-  letter-spacing: -0.04em;
+  background: var(--bg-soft);
 
   box-shadow:
     0 15px 40px
-    color-mix(in srgb, var(--primary) 28%, transparent);
+    color-mix(in srgb, var(--primary) 22%, transparent);
 
 }
+
+
+.avatar img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.35s ease;
+
+}
+
+
+.profile-card:hover .avatar img {
+
+  transform: scale(1.04);
+
+}
+
 
 
 .profile-small {
@@ -2265,6 +2287,17 @@ footer {
   .profile-card {
 
     width: 100%;
+
+  }
+
+
+  .avatar {
+
+    width: 110px;
+
+    height: 110px;
+
+    border-radius: 25px;
 
   }
 
