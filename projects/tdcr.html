@@ -19,22 +19,71 @@
     TDCR Project | HyeonTae Joo
   </title>
 
-  <!-- Main website style -->
+
+  <!-- Main website CSS -->
   <link
     rel="stylesheet"
     href="../style.css"
   >
 
-  <!-- TDCR page style -->
+
+  <!-- TDCR project page CSS -->
   <link
     rel="stylesheet"
     href="tdcr.css"
   >
 
+
+  <!-- Main JavaScript -->
   <script
     src="../script.js"
     defer
   ></script>
+
+
+  <!--
+    Overview image size override
+    Keeps the project overview slide centered
+    and prevents it from becoming too large.
+  -->
+  <style>
+
+    .overview-image-small {
+      width: 100%;
+
+      display: flex;
+
+      justify-content: center;
+
+      margin-top: 40px;
+    }
+
+
+    .overview-image-small img {
+      width: 100%;
+
+      max-width: 650px;
+
+      height: auto;
+
+      border-radius: 10px;
+
+      border: 1px solid var(--border);
+
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.16);
+    }
+
+
+    @media (max-width: 700px) {
+
+      .overview-image-small img {
+        max-width: 100%;
+      }
+
+    }
+
+  </style>
 
 </head>
 
@@ -47,6 +96,7 @@
 ===================================================== -->
 
 <div class="background-orb orb-one"></div>
+
 <div class="background-orb orb-two"></div>
 
 
@@ -59,6 +109,9 @@
 
   <nav class="navbar">
 
+
+    <!-- Logo -->
+
     <a
       href="../index.html"
       class="logo"
@@ -66,6 +119,9 @@
       HJ<span>.</span>
     </a>
 
+
+
+    <!-- Navigation links -->
 
     <div
       class="nav-links"
@@ -99,6 +155,9 @@
     </div>
 
 
+
+    <!-- Navigation buttons -->
+
     <div class="nav-actions">
 
       <button
@@ -113,12 +172,13 @@
       <button
         class="menu-toggle"
         id="menuToggle"
-        aria-label="Open menu"
+        aria-label="Open navigation menu"
       >
         ☰
       </button>
 
     </div>
+
 
   </nav>
 
@@ -130,12 +190,15 @@
 
 
 <!-- =====================================================
-     PROJECT HERO
+     PROJECT INTRO
 ===================================================== -->
 
 <section class="tdcr-hero">
 
   <div class="section-container">
+
+
+    <!-- Back button -->
 
     <a
       href="../index.html#projects"
@@ -145,10 +208,14 @@
     </a>
 
 
+
     <div class="tdcr-hero-grid">
 
 
+      <!-- Project title -->
+
       <div class="tdcr-title-area reveal">
+
 
         <p class="project-eyebrow">
           FEATURED RESEARCH · CONTINUUM ROBOTICS
@@ -167,14 +234,18 @@
 
           A two-segment tendon-driven continuum robot
           designed for independent bending and
-          extension/retraction, with integrated
-          sensing, closed-loop control, vision,
-          and robotic grasping capability.
+          extension/retraction, with integrated sensing,
+          closed-loop control, vision, and robotic
+          grasping capability.
 
         </p>
 
 
+
+        <!-- Project information -->
+
         <div class="tdcr-meta">
+
 
           <div>
 
@@ -214,13 +285,17 @@
 
           </div>
 
+
         </div>
 
       </div>
 
 
 
+      <!-- Project focus card -->
+
       <div class="tdcr-summary-card reveal">
+
 
         <p class="summary-label">
           PROJECT FOCUS
@@ -229,7 +304,9 @@
 
         <div class="summary-item">
 
-          <span>01</span>
+          <span>
+            01
+          </span>
 
           <p>
             Mechanical Design
@@ -240,7 +317,9 @@
 
         <div class="summary-item">
 
-          <span>02</span>
+          <span>
+            02
+          </span>
 
           <p>
             Modeling & Control
@@ -251,7 +330,9 @@
 
         <div class="summary-item">
 
-          <span>03</span>
+          <span>
+            03
+          </span>
 
           <p>
             Experimental Validation
@@ -259,7 +340,9 @@
 
         </div>
 
+
       </div>
+
 
     </div>
 
@@ -270,19 +353,20 @@
 
 
 <!-- =====================================================
-     OVERVIEW IMAGE
+     PROJECT OVERVIEW
 ===================================================== -->
 
 <section class="overview-section">
 
   <div class="section-container">
 
+
+    <!-- Overview heading -->
+
     <div class="overview-heading reveal">
-      <img
-        src="../image/tdcr_overview.png"
-        alt="TDCR Project Overview"
-      >
-    </div>
+
+
+      <div>
 
         <p class="section-number">
           OVERVIEW
@@ -303,18 +387,25 @@
 
       </p>
 
+
     </div>
 
 
 
-    <div class="overview-image-card reveal">
+    <!--
+      IMPORTANT:
+      The overview image appears ONLY ONCE in this HTML.
+    -->
+
+    <div class="overview-image-small reveal">
 
       <img
         src="../image/tdcr_overview.png"
-        alt="TDCR project overview including mechanical design, modeling and control, and experimental validation"
+        alt="TDCR Project Overview"
       >
 
     </div>
+
 
   </div>
 
@@ -323,20 +414,25 @@
 
 
 <!-- =====================================================
-     QUICK NAVIGATION
+     THREE MAIN TOPICS
 ===================================================== -->
 
 <section class="project-navigation">
 
   <div class="section-container">
 
+
     <div class="project-navigation-grid">
+
+
+      <!-- Mechanical Design -->
 
       <a href="#mechanical-design">
 
         <span>
           01
         </span>
+
 
         <div>
 
@@ -345,12 +441,15 @@
           </strong>
 
           <p>
+
             Two-segment structure,
             compliant backbone,
-            and integrated hardware.
+            and integrated robotic hardware.
+
           </p>
 
         </div>
+
 
         <b>
           ↓
@@ -359,11 +458,15 @@
       </a>
 
 
+
+      <!-- Modeling & Control -->
+
       <a href="#modeling-control">
 
         <span>
           02
         </span>
+
 
         <div>
 
@@ -372,11 +475,16 @@
           </strong>
 
           <p>
-            PCC, DLS inverse kinematics,
-            IMU feedback, and trajectory control.
+
+            PCC modeling,
+            DLS inverse kinematics,
+            IMU feedback,
+            and trajectory control.
+
           </p>
 
         </div>
+
 
         <b>
           ↓
@@ -385,11 +493,15 @@
       </a>
 
 
+
+      <!-- Experimental Validation -->
+
       <a href="#validation">
 
         <span>
           03
         </span>
+
 
         <div>
 
@@ -398,18 +510,22 @@
           </strong>
 
           <p>
+
             Sim-to-real motion,
             gripper tests,
-            and system integration.
+            and complete system integration.
+
           </p>
 
         </div>
+
 
         <b>
           ↓
         </b>
 
       </a>
+
 
     </div>
 
@@ -431,7 +547,10 @@
   <div class="section-container">
 
 
+    <!-- Section Header -->
+
     <div class="detail-header reveal">
+
 
       <div class="detail-number">
         01
@@ -456,28 +575,39 @@
         Mechanical architecture for independent
         bending and extension/retraction while
         maintaining structural support and
-        integrating sensing and grasping hardware.
+        integrating sensing, vision,
+        and grasping hardware.
 
       </p>
+
 
     </div>
 
 
+
+    <!-- Mechanical Design introduction -->
 
     <div class="detail-intro reveal">
 
       <p>
 
         The TDCR consists of two independently
-        actuated continuum segments designed to
-        provide both
-        <strong>bending</strong>
-        and
-        <strong>extension/retraction</strong>.
+        actuated continuum segments designed
+        to provide both
 
-        This configuration expands the reachable
-        workspace compared with a bending-only
-        continuum structure.
+        <strong>
+          bending
+        </strong>
+
+        and
+
+        <strong>
+          extension/retraction
+        </strong>.
+
+        Combining the two motion modes expands
+        the reachable workspace and increases
+        the flexibility of the robotic system.
 
       </p>
 
@@ -485,10 +615,12 @@
 
 
 
+    <!-- Mechanical Design Features -->
+
     <div class="feature-grid">
 
 
-      <!-- Two Segment -->
+      <!-- Feature 1 -->
 
       <article class="feature-card reveal">
 
@@ -504,22 +636,24 @@
 
         <p>
 
-          The robot is divided into two continuum
-          segments, allowing independent bending
-          and extension/retraction of each section.
+          The robot consists of two continuum
+          segments that can independently perform
+          bending and extension/retraction.
 
         </p>
 
 
         <div class="feature-tag">
+
           Independent Segment Motion
+
         </div>
 
       </article>
 
 
 
-      <!-- TPU Ligament -->
+      <!-- Feature 2 -->
 
       <article class="feature-card reveal">
 
@@ -536,21 +670,23 @@
         <p>
 
           Flexible TPU ligaments provide compliant
-          bending while supporting the structure
-          against undesired deformation during motion.
+          bending while supporting the robot
+          structure against unwanted deformation.
 
         </p>
 
 
         <div class="feature-tag">
-          Compliance + Support
+
+          Compliance + Structural Support
+
         </div>
 
       </article>
 
 
 
-      <!-- Tip -->
+      <!-- Feature 3 -->
 
       <article class="feature-card reveal">
 
@@ -566,23 +702,25 @@
 
         <p>
 
-          The distal module integrates a
+          The distal section integrates a
           three-finger gripper, Intel RealSense D405,
-          motor controller, battery, and onboard
-          electronics for manipulation and vision.
+          motor controller, battery, and
+          onboard electronics.
 
         </p>
 
 
         <div class="feature-tag">
+
           Vision + Manipulation
+
         </div>
 
       </article>
 
 
 
-      <!-- Base -->
+      <!-- Feature 4 -->
 
       <article class="feature-card reveal">
 
@@ -599,15 +737,17 @@
         <p>
 
           Tendon actuation and control electronics
-          are integrated into the base module,
-          providing a compact platform for
-          multi-tendon control.
+          are integrated into the base to provide
+          a compact platform for multi-tendon
+          robot actuation.
 
         </p>
 
 
         <div class="feature-tag">
-          Tendon Actuation
+
+          Tendon Actuation + Control
+
         </div>
 
       </article>
@@ -617,7 +757,10 @@
 
 
 
+    <!-- Technical Summary -->
+
     <div class="technical-strip reveal">
+
 
       <div>
 
@@ -670,7 +813,9 @@
 
       </div>
 
+
     </div>
+
 
   </div>
 
@@ -690,7 +835,10 @@
   <div class="section-container">
 
 
+    <!-- Section header -->
+
     <div class="detail-header reveal">
+
 
       <div class="detail-number">
         02
@@ -712,17 +860,22 @@
 
       <p class="detail-header-description">
 
-        Kinematic modeling and closed-loop control
-        framework for target tracking and
-        posture correction of the continuum robot.
+        Kinematic modeling and closed-loop
+        control framework for workspace analysis,
+        target tracking, trajectory generation,
+        and posture correction.
 
       </p>
+
 
     </div>
 
 
 
+    <!-- Control Flow -->
+
     <div class="control-flow reveal">
+
 
       <div class="control-node">
 
@@ -757,7 +910,7 @@
         </strong>
 
         <p>
-          Target-to-shape parameter calculation
+          Target-to-shape calculation
         </p>
 
       </div>
@@ -806,31 +959,41 @@
 
       </div>
 
+
     </div>
 
 
 
+    <!-- Modeling Cards -->
+
     <div class="model-grid">
 
 
+      <!-- PCC -->
+
       <article class="model-card reveal">
+
 
         <div class="model-label">
           MODELING
         </div>
 
+
         <h3>
           PCC Kinematic Model
         </h3>
 
+
         <p>
 
-          A Piecewise Constant Curvature model
-          is used to represent the continuum
-          robot configuration and predict its
-          shape and tip position.
+          A Piecewise Constant Curvature
+          kinematic model is used to represent
+          the continuum robot configuration
+          and predict robot shape
+          and tip position.
 
         </p>
+
 
         <ul>
 
@@ -839,7 +1002,7 @@
           </li>
 
           <li>
-            Forward position prediction
+            Forward tip-position prediction
           </li>
 
           <li>
@@ -848,28 +1011,35 @@
 
         </ul>
 
+
       </article>
 
 
 
+      <!-- DLS -->
+
       <article class="model-card reveal">
+
 
         <div class="model-label">
           INVERSE KINEMATICS
         </div>
 
+
         <h3>
           Damped Least-Squares IK
         </h3>
 
+
         <p>
 
           Damped Least-Squares inverse kinematics
-          calculates robot shape parameters
+          calculates the robot configuration
           required to move the end-effector
           toward a desired target position.
 
         </p>
+
 
         <ul>
 
@@ -878,37 +1048,44 @@
           </li>
 
           <li>
-            Numerical IK solution
+            Numerically stable IK
           </li>
 
           <li>
-            Stable trajectory planning
+            Trajectory planning
           </li>
 
         </ul>
+
 
       </article>
 
 
 
+      <!-- IMU -->
+
       <article class="model-card reveal">
 
+
         <div class="model-label">
-          FEEDBACK
+          FEEDBACK CONTROL
         </div>
+
 
         <h3>
           IMU-Based Feedback
         </h3>
 
+
         <p>
 
-          IMU orientation measurements are used
-          to compare the desired and actual
-          segment posture and provide closed-loop
-          posture correction.
+          IMU orientation measurements
+          are used to compare the desired
+          and actual segment posture,
+          enabling closed-loop posture correction.
 
         </p>
+
 
         <ul>
 
@@ -917,7 +1094,7 @@
           </li>
 
           <li>
-            Posture error feedback
+            Orientation error calculation
           </li>
 
           <li>
@@ -926,27 +1103,35 @@
 
         </ul>
 
+
       </article>
 
 
 
+      <!-- Bending Plane -->
+
       <article class="model-card reveal">
+
 
         <div class="model-label">
           MOTION CONSTRAINT
         </div>
 
+
         <h3>
           Bending-Plane Constraint
         </h3>
 
+
         <p>
 
-          Motion outside the desired bending plane
-          is suppressed to reduce unnecessary
-          movement and improve trajectory accuracy.
+          Motion outside the desired bending
+          plane is suppressed to reduce
+          unnecessary movement and improve
+          trajectory consistency.
 
         </p>
+
 
         <ul>
 
@@ -964,10 +1149,12 @@
 
         </ul>
 
+
       </article>
 
 
     </div>
+
 
   </div>
 
@@ -987,7 +1174,10 @@
   <div class="section-container">
 
 
+    <!-- Section Header -->
+
     <div class="detail-header reveal">
+
 
       <div class="detail-number">
         03
@@ -1009,26 +1199,33 @@
 
       <p class="detail-header-description">
 
-        Physical validation of trajectory tracking,
-        gripper operation, and complete TDCR
+        Experimental validation of
+        trajectory-planned motion,
+        gripper operation,
+        and complete mechanical and
         hardware integration.
 
       </p>
+
 
     </div>
 
 
 
+    <!-- Validation Cards -->
+
     <div class="validation-grid">
 
 
-      <!-- Sim to Real -->
+      <!-- Test 1 -->
 
       <article class="validation-card reveal">
+
 
         <div class="validation-number">
           TEST 01
         </div>
+
 
         <h3>
           Sim-to-Real
@@ -1039,8 +1236,9 @@
         <p>
 
           Trajectory-planned motion generated
-          from the simulation framework was
-          executed on the physical TDCR prototype.
+          from the simulation framework
+          was executed on the physical TDCR
+          prototype.
 
         </p>
 
@@ -1052,23 +1250,28 @@
           </span>
 
           <strong>
+
             Validated trajectory-planned
-            physical motion
+            physical TDCR motion
+
           </strong>
 
         </div>
+
 
       </article>
 
 
 
-      <!-- Gripper -->
+      <!-- Test 2 -->
 
       <article class="validation-card reveal">
+
 
         <div class="validation-number">
           TEST 02
         </div>
+
 
         <h3>
           Gripper Functional Test
@@ -1077,9 +1280,10 @@
 
         <p>
 
-          The three-finger gripper was tested
-          independently to verify stable
-          opening, closing, and grasping motion.
+          The three-finger gripper
+          was independently tested
+          to verify stable opening,
+          closing, and grasping motion.
 
         </p>
 
@@ -1091,23 +1295,28 @@
           </span>
 
           <strong>
+
             Stable gripper operation
             and grasping
+
           </strong>
 
         </div>
+
 
       </article>
 
 
 
-      <!-- Integration -->
+      <!-- Test 3 -->
 
       <article class="validation-card reveal">
+
 
         <div class="validation-number">
           TEST 03
         </div>
+
 
         <h3>
           Integrated TDCR Prototype
@@ -1116,10 +1325,12 @@
 
         <p>
 
-          Mechanical components, gripper,
-          onboard electronics, sensing,
-          and actuation hardware were integrated
-          into the complete two-segment TDCR.
+          Mechanical components,
+          gripper, sensing,
+          control electronics,
+          and actuation hardware
+          were integrated into
+          the complete TDCR system.
 
         </p>
 
@@ -1131,11 +1342,14 @@
           </span>
 
           <strong>
-            Complete mechanical and
-            hardware integration
+
+            Complete mechanical
+            and hardware integration
+
           </strong>
 
         </div>
+
 
       </article>
 
@@ -1144,9 +1358,13 @@
 
 
 
+    <!-- Validation Summary -->
+
     <div class="validation-summary reveal">
 
+
       <div>
+
 
         <p class="summary-label">
           PROJECT OUTCOME
@@ -1154,24 +1372,32 @@
 
 
         <h3>
+
           From mechanical concept
           to integrated robotic system.
+
         </h3>
+
 
       </div>
 
 
+
       <p>
 
-        The project demonstrates an integrated
-        continuum robotic platform combining
-        mechanical design, kinematic modeling,
+        The project demonstrates an
+        integrated continuum robotic
+        platform combining mechanical
+        design, kinematic modeling,
         closed-loop sensing and control,
-        eye-in-hand vision, and robotic grasping.
+        eye-in-hand vision,
+        and robotic grasping.
 
       </p>
 
+
     </div>
+
 
   </div>
 
@@ -1180,14 +1406,16 @@
 
 
 <!-- =====================================================
-     NEXT
+     END OF PROJECT
 ===================================================== -->
 
 <section class="project-end">
 
   <div class="section-container">
 
+
     <div class="project-end-card reveal">
+
 
       <p>
         HYEONTAE JOO · CONTINUUM ROBOTICS
@@ -1195,12 +1423,15 @@
 
 
       <h2>
+
         Two-Segment
         Tendon-Driven Continuum Robot
+
       </h2>
 
 
       <div class="project-end-buttons">
+
 
         <a
           href="../index.html#projects"
@@ -1217,9 +1448,12 @@
           Home
         </a>
 
+
       </div>
 
+
     </div>
+
 
   </div>
 
@@ -1238,6 +1472,7 @@
 
   <div class="footer-inner">
 
+
     <p>
       © 2026 HyeonTae Joo
     </p>
@@ -1246,6 +1481,7 @@
     <p>
       Robotics · Control · Mechatronics
     </p>
+
 
   </div>
 
