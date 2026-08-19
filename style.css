@@ -1196,11 +1196,15 @@ img {
 .project-image {
   position: relative;
 
-  height: 310px;
+  height: 360px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
   overflow: hidden;
 
-  background: var(--bg-soft);
+  background: #ffffff;
 }
 
 
@@ -1208,7 +1212,8 @@ img {
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 
   transition: transform 0.5s ease;
 }
