@@ -41,6 +41,11 @@
   ></script>
 
 
+
+  <!-- =====================================================
+       PAGE-SPECIFIC STYLE
+  ===================================================== -->
+
   <style>
 
     /* =====================================================
@@ -49,8 +54,10 @@
 
     .overview-image-small {
       width: 100%;
+
       display: flex;
       justify-content: center;
+
       margin-top: 30px;
     }
 
@@ -58,6 +65,7 @@
     .overview-image-small img {
       width: 100%;
       max-width: 1000px;
+
       height: auto;
 
       border-radius: 10px;
@@ -68,18 +76,23 @@
     }
 
 
+
     /* =====================================================
-       VALIDATION VIDEOS
+       VALIDATION VIDEO SECTION
     ===================================================== */
 
     .validation-video-section {
-      margin-top: 50px;
+      width: 100%;
+
+      margin-top: 55px;
+      margin-bottom: 55px;
     }
 
 
     .validation-video-heading {
       text-align: center;
-      margin-bottom: 28px;
+
+      margin-bottom: 32px;
     }
 
 
@@ -88,6 +101,7 @@
 
       font-size: 0.78rem;
       font-weight: 700;
+
       letter-spacing: 0.14em;
 
       color: var(--accent);
@@ -101,17 +115,44 @@
     }
 
 
+
+    /* =====================================================
+       VIDEO GRID
+       One large video per row
+    ===================================================== */
+
     .tdcr-video-grid {
+      width: 100%;
+      max-width: 1150px;
+
+      margin: 0 auto;
+
       display: grid;
 
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
 
-      gap: 28px;
+      align-items: start;
+
+      gap: 42px;
     }
 
 
+
+    /* =====================================================
+       VIDEO CARD
+    ===================================================== */
+
     .tdcr-video-card {
+      display: block;
+
+      width: 100%;
+
+      height: auto !important;
+      min-height: 0 !important;
+
+      align-self: start;
+
       overflow: hidden;
 
       border: 1px solid var(--border);
@@ -124,18 +165,37 @@
     }
 
 
+
+    /* =====================================================
+       VIDEO
+    ===================================================== */
+
     .tdcr-video-card video {
       display: block;
 
       width: 100%;
+
       height: auto;
+
+      aspect-ratio: 16 / 9;
+
+      object-fit: contain;
 
       background: #000;
     }
 
 
+
+    /* =====================================================
+       VIDEO DESCRIPTION
+    ===================================================== */
+
     .tdcr-video-content {
-      padding: 22px 24px 25px;
+      width: 100%;
+
+      box-sizing: border-box;
+
+      padding: 24px 28px 28px;
     }
 
 
@@ -154,15 +214,16 @@
 
 
     .tdcr-video-content h4 {
-      margin:
-        0 0 10px;
+      margin: 0 0 10px;
 
-      font-size: 1.15rem;
+      font-size: 1.2rem;
     }
 
 
     .tdcr-video-content p {
       margin: 0;
+
+      max-width: 850px;
 
       line-height: 1.7;
 
@@ -170,10 +231,19 @@
     }
 
 
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
     @media (max-width: 800px) {
 
       .tdcr-video-grid {
-        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .tdcr-video-content {
+        padding: 20px 22px 24px;
       }
 
     }
@@ -190,6 +260,7 @@
   </style>
 
 </head>
+
 
 
 <body>
@@ -214,6 +285,8 @@
   <nav class="navbar">
 
 
+    <!-- Logo -->
+
     <a
       href="../index.html"
       class="logo"
@@ -222,6 +295,8 @@
     </a>
 
 
+
+    <!-- Navigation Links -->
 
     <div
       class="nav-links"
@@ -256,6 +331,8 @@
 
 
 
+    <!-- Navigation Buttons -->
+
     <div class="nav-actions">
 
       <button
@@ -287,6 +364,7 @@
 <main>
 
 
+
 <!-- =====================================================
      PROJECT INTRO
 ===================================================== -->
@@ -295,6 +373,8 @@
 
   <div class="section-container">
 
+
+    <!-- Back Button -->
 
     <a
       href="../index.html#projects"
@@ -308,6 +388,8 @@
     <div class="tdcr-hero-grid">
 
 
+      <!-- Project Title -->
+
       <div class="tdcr-title-area reveal">
 
 
@@ -317,10 +399,16 @@
 
 
         <h1>
+
           Tendon-Driven
           <br>
+
           Continuum Robot
-          <span>(TDCR)</span>
+
+          <span>
+            (TDCR)
+          </span>
+
         </h1>
 
 
@@ -335,6 +423,8 @@
         </p>
 
 
+
+        <!-- Project Information -->
 
         <div class="tdcr-meta">
 
@@ -380,9 +470,12 @@
 
         </div>
 
+
       </div>
 
 
+
+      <!-- Project Focus Card -->
 
       <div class="tdcr-summary-card reveal">
 
@@ -508,6 +601,8 @@
     <div class="project-navigation-grid">
 
 
+      <!-- Mechanical Design -->
+
       <a href="#mechanical-design">
 
         <span>
@@ -520,6 +615,7 @@
           <strong>
             Mechanical Design
           </strong>
+
 
           <p>
 
@@ -540,6 +636,8 @@
 
 
 
+      <!-- Modeling & Control -->
+
       <a href="#modeling-control">
 
         <span>
@@ -552,6 +650,7 @@
           <strong>
             Modeling & Control
           </strong>
+
 
           <p>
 
@@ -573,6 +672,8 @@
 
 
 
+      <!-- Experimental Validation -->
+
       <a href="#validation">
 
         <span>
@@ -585,6 +686,7 @@
           <strong>
             Experimental Validation
           </strong>
+
 
           <p>
 
@@ -624,6 +726,8 @@
   <div class="section-container">
 
 
+    <!-- Section Header -->
+
     <div class="detail-header reveal">
 
 
@@ -660,6 +764,8 @@
 
 
 
+    <!-- Introduction -->
+
     <div class="detail-intro reveal">
 
       <p>
@@ -688,10 +794,12 @@
 
 
 
+    <!-- Mechanical Features -->
+
     <div class="feature-grid">
 
 
-      <!-- Feature 1 -->
+      <!-- Feature 01 -->
 
       <article class="feature-card reveal">
 
@@ -724,7 +832,7 @@
 
 
 
-      <!-- Feature 2 -->
+      <!-- Feature 02 -->
 
       <article class="feature-card reveal">
 
@@ -757,7 +865,7 @@
 
 
 
-      <!-- Feature 3 -->
+      <!-- Feature 03 -->
 
       <article class="feature-card reveal">
 
@@ -791,7 +899,7 @@
 
 
 
-      <!-- Feature 4 -->
+      <!-- Feature 04 -->
 
       <article class="feature-card reveal">
 
@@ -827,6 +935,8 @@
     </div>
 
 
+
+    <!-- Technical Summary -->
 
     <div class="technical-strip reveal">
 
@@ -903,6 +1013,8 @@
 
   <div class="section-container">
 
+
+    <!-- Section Header -->
 
     <div class="detail-header reveal">
 
@@ -1031,6 +1143,8 @@
 
 
 
+    <!-- Modeling Cards -->
+
     <div class="model-grid">
 
 
@@ -1127,7 +1241,7 @@
 
 
 
-      <!-- IMU -->
+      <!-- IMU Feedback -->
 
       <article class="model-card reveal">
 
@@ -1239,6 +1353,8 @@
   <div class="section-container">
 
 
+    <!-- Section Header -->
+
     <div class="detail-header reveal">
 
 
@@ -1288,6 +1404,7 @@
           DEMONSTRATION
         </p>
 
+
         <h3>
           Experimental Tests
         </h3>
@@ -1299,13 +1416,16 @@
       <div class="tdcr-video-grid">
 
 
-        <!-- SIM2REAL VIDEO -->
+        <!-- =============================================
+             SIM2REAL VIDEO
+        ============================================== -->
 
         <article class="tdcr-video-card">
 
 
           <video
             controls
+            muted
             playsinline
             preload="metadata"
           >
@@ -1320,7 +1440,9 @@
           </video>
 
 
+
           <div class="tdcr-video-content">
+
 
             <span class="tdcr-video-label">
               SIM2REAL TEST
@@ -1341,6 +1463,7 @@
 
             </p>
 
+
           </div>
 
 
@@ -1348,7 +1471,9 @@
 
 
 
-        <!-- GRIPPER VIDEO -->
+        <!-- =============================================
+             GRIPPER VIDEO
+        ============================================== -->
 
         <article class="tdcr-video-card">
 
@@ -1369,7 +1494,9 @@
           </video>
 
 
+
           <div class="tdcr-video-content">
+
 
             <span class="tdcr-video-label">
               GRIPPER OPERATION
@@ -1389,6 +1516,7 @@
               reliable end-effector actuation.
 
             </p>
+
 
           </div>
 
@@ -1410,7 +1538,7 @@
     <div class="validation-grid">
 
 
-      <!-- Test 1 -->
+      <!-- Test 01 -->
 
       <article class="validation-card reveal">
 
@@ -1421,8 +1549,10 @@
 
 
         <h3>
+
           Sim-to-Real
           Trajectory Test
+
         </h3>
 
 
@@ -1442,6 +1572,7 @@
             RESULT
           </span>
 
+
           <strong>
 
             Physical execution of
@@ -1456,7 +1587,7 @@
 
 
 
-      <!-- Test 2 -->
+      <!-- Test 02 -->
 
       <article class="validation-card reveal">
 
@@ -1487,6 +1618,7 @@
             RESULT
           </span>
 
+
           <strong>
 
             Stable gripper
@@ -1501,7 +1633,7 @@
 
 
 
-      <!-- Test 3 -->
+      <!-- Test 03 -->
 
       <article class="validation-card reveal">
 
@@ -1533,6 +1665,7 @@
           <span>
             RESULT
           </span>
+
 
           <strong>
 
@@ -1626,6 +1759,7 @@
         Tendon-Driven Continuum Robot
 
       </h2>
+
 
 
       <div class="project-end-buttons">
