@@ -41,37 +41,141 @@
   ></script>
 
 
-  <!--
-    Overview image size override
-    Keeps the project overview slide centered
-    and prevents it from becoming too large.
-  -->
   <style>
+
+    /* =====================================================
+       OVERVIEW IMAGE
+    ===================================================== */
 
     .overview-image-small {
       width: 100%;
-
       display: flex;
-
       justify-content: center;
-
       margin-top: 30px;
     }
 
 
     .overview-image-small img {
       width: 100%;
-
       max-width: 1000px;
-
       height: auto;
 
       border-radius: 10px;
-
       border: 1px solid var(--border);
 
       box-shadow:
         0 18px 45px rgba(0, 0, 0, 0.16);
+    }
+
+
+    /* =====================================================
+       VALIDATION VIDEOS
+    ===================================================== */
+
+    .validation-video-section {
+      margin-top: 50px;
+    }
+
+
+    .validation-video-heading {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+
+    .validation-video-heading p {
+      margin: 0 0 8px;
+
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+
+      color: var(--accent);
+    }
+
+
+    .validation-video-heading h3 {
+      margin: 0;
+
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+
+    .tdcr-video-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 28px;
+    }
+
+
+    .tdcr-video-card {
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+      border-radius: 16px;
+
+      background: var(--card-bg);
+
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.10);
+    }
+
+
+    .tdcr-video-card video {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      background: #000;
+    }
+
+
+    .tdcr-video-content {
+      padding: 22px 24px 25px;
+    }
+
+
+    .tdcr-video-label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 0.72rem;
+      font-weight: 700;
+
+      letter-spacing: 0.13em;
+
+      color: var(--accent);
+    }
+
+
+    .tdcr-video-content h4 {
+      margin:
+        0 0 10px;
+
+      font-size: 1.15rem;
+    }
+
+
+    .tdcr-video-content p {
+      margin: 0;
+
+      line-height: 1.7;
+
+      color: var(--text-secondary);
+    }
+
+
+    @media (max-width: 800px) {
+
+      .tdcr-video-grid {
+        grid-template-columns: 1fr;
+      }
+
     }
 
 
@@ -110,8 +214,6 @@
   <nav class="navbar">
 
 
-    <!-- Logo -->
-
     <a
       href="../index.html"
       class="logo"
@@ -120,8 +222,6 @@
     </a>
 
 
-
-    <!-- Navigation links -->
 
     <div
       class="nav-links"
@@ -155,8 +255,6 @@
     </div>
 
 
-
-    <!-- Navigation buttons -->
 
     <div class="nav-actions">
 
@@ -198,8 +296,6 @@
   <div class="section-container">
 
 
-    <!-- Back button -->
-
     <a
       href="../index.html#projects"
       class="back-link"
@@ -211,8 +307,6 @@
 
     <div class="tdcr-hero-grid">
 
-
-      <!-- Project title -->
 
       <div class="tdcr-title-area reveal">
 
@@ -235,14 +329,12 @@
           A two-segment tendon-driven continuum robot
           designed for independent bending and
           extension/retraction, with integrated sensing,
-          closed-loop control, vision, and robotic
-          grasping capability.
+          kinematic modeling, closed-loop control,
+          and end-effector actuation.
 
         </p>
 
 
-
-        <!-- Project information -->
 
         <div class="tdcr-meta">
 
@@ -291,8 +383,6 @@
       </div>
 
 
-
-      <!-- Project focus card -->
 
       <div class="tdcr-summary-card reveal">
 
@@ -361,8 +451,6 @@
   <div class="section-container">
 
 
-    <!-- Overview heading -->
-
     <div class="overview-heading reveal">
 
 
@@ -392,11 +480,6 @@
 
 
 
-    <!--
-      IMPORTANT:
-      The overview image appears ONLY ONCE in this HTML.
-    -->
-
     <div class="overview-image-small reveal">
 
       <img
@@ -424,8 +507,6 @@
 
     <div class="project-navigation-grid">
 
-
-      <!-- Mechanical Design -->
 
       <a href="#mechanical-design">
 
@@ -458,8 +539,6 @@
       </a>
 
 
-
-      <!-- Modeling & Control -->
 
       <a href="#modeling-control">
 
@@ -494,8 +573,6 @@
 
 
 
-      <!-- Experimental Validation -->
-
       <a href="#validation">
 
         <span>
@@ -511,9 +588,9 @@
 
           <p>
 
-            Sim-to-real motion,
-            gripper tests,
-            and complete system integration.
+            Sim-to-real trajectory execution,
+            gripper operation,
+            and system integration.
 
           </p>
 
@@ -547,8 +624,6 @@
   <div class="section-container">
 
 
-    <!-- Section Header -->
-
     <div class="detail-header reveal">
 
 
@@ -575,8 +650,8 @@
         Mechanical architecture for independent
         bending and extension/retraction while
         maintaining structural support and
-        integrating sensing, vision,
-        and grasping hardware.
+        integrating sensing, actuation,
+        and end-effector hardware.
 
       </p>
 
@@ -584,8 +659,6 @@
     </div>
 
 
-
-    <!-- Mechanical Design introduction -->
 
     <div class="detail-intro reveal">
 
@@ -614,8 +687,6 @@
     </div>
 
 
-
-    <!-- Mechanical Design Features -->
 
     <div class="feature-grid">
 
@@ -703,16 +774,16 @@
         <p>
 
           The distal section integrates a
-          three-finger gripper, Intel RealSense D405,
-          motor controller, battery, and
-          onboard electronics.
+          three-finger gripper, motor controller,
+          battery, IMU sensing,
+          and onboard electronics.
 
         </p>
 
 
         <div class="feature-tag">
 
-          Vision + Manipulation
+          End-Effector Integration
 
         </div>
 
@@ -757,8 +828,6 @@
 
 
 
-    <!-- Technical Summary -->
-
     <div class="technical-strip reveal">
 
 
@@ -791,11 +860,11 @@
       <div>
 
         <span>
-          Vision
+          Feedback
         </span>
 
         <strong>
-          RealSense D405
+          IMU Sensing
         </strong>
 
       </div>
@@ -834,8 +903,6 @@
 
   <div class="section-container">
 
-
-    <!-- Section header -->
 
     <div class="detail-header reveal">
 
@@ -963,8 +1030,6 @@
     </div>
 
 
-
-    <!-- Modeling Cards -->
 
     <div class="model-grid">
 
@@ -1174,8 +1239,6 @@
   <div class="section-container">
 
 
-    <!-- Section Header -->
-
     <div class="detail-header reveal">
 
 
@@ -1200,9 +1263,9 @@
       <p class="detail-header-description">
 
         Experimental validation of
-        trajectory-planned motion,
-        gripper operation,
-        and complete mechanical and
+        trajectory-planned TDCR motion,
+        independent gripper operation,
+        and mechanical and
         hardware integration.
 
       </p>
@@ -1212,7 +1275,137 @@
 
 
 
-    <!-- Validation Cards -->
+    <!-- =================================================
+         DEMONSTRATION VIDEOS
+    ================================================== -->
+
+    <div class="validation-video-section reveal">
+
+
+      <div class="validation-video-heading">
+
+        <p>
+          DEMONSTRATION
+        </p>
+
+        <h3>
+          Experimental Tests
+        </h3>
+
+      </div>
+
+
+
+      <div class="tdcr-video-grid">
+
+
+        <!-- SIM2REAL VIDEO -->
+
+        <article class="tdcr-video-card">
+
+
+          <video
+            controls
+            playsinline
+            preload="metadata"
+          >
+
+            <source
+              src="../videos/tdcr_sim2real.mp4"
+              type="video/mp4"
+            >
+
+            Your browser does not support the video tag.
+
+          </video>
+
+
+          <div class="tdcr-video-content">
+
+            <span class="tdcr-video-label">
+              SIM2REAL TEST
+            </span>
+
+
+            <h4>
+              Trajectory-Planned TDCR Motion
+            </h4>
+
+
+            <p>
+
+              Simulation-based trajectory planning
+              and control commands are executed
+              on the physical TDCR prototype
+              to evaluate sim-to-real motion behavior.
+
+            </p>
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- GRIPPER VIDEO -->
+
+        <article class="tdcr-video-card">
+
+
+          <video
+            controls
+            playsinline
+            preload="metadata"
+          >
+
+            <source
+              src="../videos/tdcr_gripper.mp4"
+              type="video/mp4"
+            >
+
+            Your browser does not support the video tag.
+
+          </video>
+
+
+          <div class="tdcr-video-content">
+
+            <span class="tdcr-video-label">
+              GRIPPER OPERATION
+            </span>
+
+
+            <h4>
+              Three-Finger Gripper Test
+            </h4>
+
+
+            <p>
+
+              Independent opening and closing
+              operation of the three-finger
+              gripper is tested to verify
+              reliable end-effector actuation.
+
+            </p>
+
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         VALIDATION CARDS
+    ================================================== -->
 
     <div class="validation-grid">
 
@@ -1236,9 +1429,9 @@
         <p>
 
           Trajectory-planned motion generated
-          from the simulation framework
-          was executed on the physical TDCR
-          prototype.
+          from the simulation and kinematic
+          framework was executed on the
+          physical TDCR prototype.
 
         </p>
 
@@ -1251,8 +1444,8 @@
 
           <strong>
 
-            Validated trajectory-planned
-            physical TDCR motion
+            Physical execution of
+            trajectory-planned TDCR motion
 
           </strong>
 
@@ -1282,8 +1475,8 @@
 
           The three-finger gripper
           was independently tested
-          to verify stable opening,
-          closing, and grasping motion.
+          to verify repeatable opening
+          and closing operation.
 
         </p>
 
@@ -1296,8 +1489,8 @@
 
           <strong>
 
-            Stable gripper operation
-            and grasping
+            Stable gripper
+            opening and closing
 
           </strong>
 
@@ -1326,11 +1519,11 @@
         <p>
 
           Mechanical components,
-          gripper, sensing,
+          gripper, IMU sensing,
           control electronics,
-          and actuation hardware
+          and tendon actuation hardware
           were integrated into
-          the complete TDCR system.
+          the TDCR prototype.
 
         </p>
 
@@ -1343,8 +1536,8 @@
 
           <strong>
 
-            Complete mechanical
-            and hardware integration
+            Mechanical and
+            hardware system integration
 
           </strong>
 
@@ -1358,7 +1551,9 @@
 
 
 
-    <!-- Validation Summary -->
+    <!-- =================================================
+         VALIDATION SUMMARY
+    ================================================== -->
 
     <div class="validation-summary reveal">
 
@@ -1374,7 +1569,8 @@
         <h3>
 
           From mechanical concept
-          to integrated robotic system.
+          to an experimentally validated
+          continuum robotic platform.
 
         </h3>
 
@@ -1385,13 +1581,15 @@
 
       <p>
 
-        The project demonstrates an
-        integrated continuum robotic
-        platform combining mechanical
-        design, kinematic modeling,
-        closed-loop sensing and control,
-        eye-in-hand vision,
-        and robotic grasping.
+        The project demonstrates a
+        two-segment continuum robotic
+        platform combining mechanical design,
+        PCC-based kinematic modeling,
+        DLS inverse kinematics,
+        IMU-based closed-loop control,
+        trajectory-planned physical motion,
+        and an integrated three-finger
+        gripper mechanism.
 
       </p>
 
